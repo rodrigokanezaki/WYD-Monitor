@@ -1,0 +1,73 @@
+name: "🐛 Reportar bug"
+description: "Informe um problema encontrado no WYD Monitor"
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a melhorar o WYD Monitor. Não publique senhas, tokens, chaves ou outros dados pessoais.
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+      description: Qual versão do WYD Monitor você está usando?
+      placeholder: "v1.0.0-beta.7"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área afetada
+      options:
+        - Painel / Dashboard
+        - Personagens
+        - Itens
+        - Alertas
+        - Eventos
+        - Conexão entre PCs
+        - Acesso pelo celular
+        - Aparência / Interface
+        - Inicialização
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do problema
+      description: Explique claramente o que aconteceu.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Liste os passos que fazem o problema acontecer.
+      placeholder: |
+        1. Abri...
+        2. Cliquei...
+        3. O monitor...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: O que deveria ter acontecido?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Prints ou logs
+      description: Anexe prints ou trechos relevantes. Remova dados pessoais e credenciais antes de enviar.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmações
+      options:
+        - label: Verifiquei se já existe uma Issue sobre este problema.
+          required: true
+        - label: Removi senhas, tokens, IPs privados e outros dados pessoais dos anexos.
+          required: true
