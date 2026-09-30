@@ -1,0 +1,37 @@
+# Personal/local data
+Acesso-Celular.txt
+Acesso-Celular-Senha.txt
+*.local.*
+.env
+.env.*
+secrets/
+credentials/
+
+# Runtime state/logs
+*.log
+logs/
+temp/
+tmp/
+*.pid
+*.lock
+
+# Builds / binaries
+bin/*.dll
+tools/*.exe
+*.exe
+*.pdb
+build/
+dist/
+release/
+
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Backups
+backup/
+backups/
+*.bak
