@@ -1,0 +1,67 @@
+﻿WYD MONITOR — JUNTAR DOIS PCs
+Versão 1.0.0-beta.7 | Teste acompanhado na mesma rede
+
+1. Feche a versão anterior nos dois PCs. Extraia este novo ZIP em uma pasta
+   nova em CADA PC. Não copie a pasta de configurações de um PC para o outro.
+2. Abra WYD Monitor.exe nos dois PCs e o jogo normalmente em cada um.
+   Se aparecer que falta WebView2, siga COMECE-AQUI.txt no computador afetado.
+3. No menu do painel, abra “Conexões” para configurar os dois PCs.
+4. No PC 1, clique em “Gerar chave” e depois em “Mostrar chave”. No campo da
+   chave, use Ctrl+A e Ctrl+C para copiá-la. Cole essa mesma chave no campo
+   “Chave de conexão” do PC 2. Não gere outra chave no PC 2.
+5. A página mostra o IP deste PC. No campo “IP do outro computador” do
+   PC 1, digite o IP do PC 2. No PC 2, digite o IP do PC 1.
+   Exemplo: PC 1 = 192.168.1.10; PC 2 = 192.168.1.20.
+6. Clique em “Conectar computadores” NOS DOIS PCs. Espere alguns segundos.
+7. Os dois devem mostrar “Conectado a ...”, personagens dos dois computadores
+   e os totais. Confira a origem identificada junto de cada personagem.
+
+A tela reúne personagens, status, nível, servidor, HP, mapa, fada, XP, gold
+somado da mochila/baú e moedas. Os totais mostram somente personagens online com dados
+disponíveis. “Parcial” significa que falta informação ou um PC está desconectado.
+Baú compartilhado entre personagens pode ser contado mais de uma vez.
+
+Após conectar, o painel principal reúne os personagens e os totais nos
+modos Work e Gamer. Use o filtro por PC e confira a origem de cada personagem.
+Para mudar o visual, abra Aparência; a escolha fica salva para a próxima abertura.
+
+O inventário detalhado, o histórico, as preferências e os alertas continuam locais.
+Para pesquisar os itens ou configurar os avisos de um personagem remoto, abra o
+Monitor no computador de origem. Os limites sem XP e sem drop são em minutos;
+0 desliga o respectivo aviso. O outro PC não controla o jogo nem altera essas
+configurações. Personagens com o mesmo nome em PCs diferentes são diferenciados
+pela origem; não copie os dados de configuração de um PC para o outro.
+
+FECHAR OU RECONECTAR
+Trocar de página mantém a conexão enquanto o Monitor estiver aberto.
+Para desligar a troca de dados, clique “Desconectar” ou feche o Monitor.
+A chave não é salva no disco. Depois de reiniciar, repita o pareamento nos dois
+PCs. Não compartilhe a chave com outras pessoas; quem a possui pode consultar
+os dados compartilhados se alcançar a porta pela rede local.
+
+SE NÃO CONECTAR
+- Confira a mesma chave nos dois PCs e os IPs cruzados corretamente.
+- Ambos precisam estar conectados ao mesmo roteador. Rede de convidados pode
+  impedir que os computadores se comuniquem.
+- Deixe data e hora do Windows ajustadas automaticamente nos dois PCs.
+- A comunicação usa TCP 8766. Não abra portas no roteador.
+- Não desative o firewall. Em uma rede doméstica de confiança, configure a rede
+  do Windows como Privada. Se necessário, em CADA PC abra Windows PowerShell
+  como administrador e execute esta linha para liberar só essa porta na rede local:
+
+New-NetFirewallRule -DisplayName "WYD Monitor - Dois PCs" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 8766 -RemoteAddress LocalSubnet -Profile Private -Program "$env:WINDIR\System32\WindowsPowerShell\v1.0\powershell.exe"
+
+Execute a linha uma única vez por PC. Se houver erro, envie uma imagem ao
+responsável pelo teste. Não libere acesso em redes públicas.
+Para remover a regra criada por este guia:
+
+Get-NetFirewallRule -DisplayName "WYD Monitor - Dois PCs" | Remove-NetFirewallRule
+
+ENVIE SEU RESULTADO
+Confirme se ambos enxergam todos os personagens e se os totais conferem no
+painel principal dos modos Work e Gamer. Confira o estado da rede em Conexões.
+Desconecte um deles e confira se o outro remove os dados remotos da soma e
+mostra “parcial”. Reconecte e confira a atualização. Envie erros sem expor a chave.
+
+O transporte e a soma foram testados localmente. O funcionamento entre dois
+computadores reais, com o firewall e o jogo, ainda precisa deste teste acompanhado.

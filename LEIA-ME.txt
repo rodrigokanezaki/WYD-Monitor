@@ -1,0 +1,65 @@
+WYD Monitor 1.0.0-beta.7 - candidato interno ao beta fechado
+Este pacote ainda NAO esta aprovado para distribuicao aos participantes.
+
+INICIAR
+Extraia a pasta completa e abra "WYD Monitor.exe". Nao copie somente o EXE.
+Requisitos: Windows x64, Windows PowerShell 5.1 Desktop, .NET Framework 4.8
+e Microsoft Edge WebView2 Runtime (Evergreen).
+Uma instancia por computador. Feche seu Monitor anterior antes de trocar a versao.
+Se a porta 8765 estiver ocupada, identifique o aplicativo responsavel.
+
+Se faltar o WebView2 Runtime, siga a secao correspondente de COMECE-AQUI.txt.
+Download oficial: https://developer.microsoft.com/microsoft-edge/webview2/
+O instalador Evergreen precisa de internet. O Monitor nao instala componentes
+globais automaticamente. Os arquivos SDK incluidos na pasta bin nao substituem
+o Runtime do navegador. Mantenha todas as DLLs e os arquivos assets/desktop juntos.
+
+PAINEL WORK E GAMER
+Escolha Work ou Gamer na opcao de aparencia do painel. A preferencia fica salva.
+Work mostra uma lista compacta; Gamer mostra cartoes por personagem.
+Para conectar dois computadores, abra Conexoes e preencha os dados do outro PC.
+Os dois modos usam os mesmos dados e configuracoes. Com Dois PCs conectado,
+consulte a origem de cada personagem e filtre uma origem ou ambas.
+Dados remotos indisponiveis ficam fora dos totais. Confira os avisos de parcial.
+Configure as caixinhas de avisos por personagem e os minutos sem XP/sem drop.
+0 desliga o respectivo limite. Configuracoes de personagens remotos sao feitas
+no Monitor do computador de origem, inclusive avisos e captura.
+Itens tem barra de pesquisa por nome/ID de item ou personagem. A consulta de
+inventario e bau continua local; itens do outro PC devem ser consultados la.
+Veja COMECE-AQUI.txt e GUIA-DOIS-PCS.txt para os passos de uso.
+
+DADOS E RECUPERACAO
+Dados e configuracoes: %LOCALAPPDATA%\WYDMonitor.
+Nenhum dado da instalacao do desenvolvedor e importado automaticamente.
+Antes de atualizar, feche o Monitor e guarde uma copia dessa pasta.
+Voltar o executavel nao reverte configuracoes; preserve os dados antes de restaurar.
+
+COMPATIBILIDADE E LIMITES
+O Monitor identifica o executavel e localiza automaticamente as estruturas
+compativeis de leitura. Nao e necessario cadastrar o hash apos cada atualizacao.
+Se a estrutura mudar de forma desconhecida, a leitura e recusada e o motivo
+aparece no painel. Automatico nao significa compatibilidade com toda versao futura.
+Homonimos simultaneos sao bloqueados nesta sessao.
+Se aparecer "Sem acesso", o Windows bloqueou a leitura. Se o jogo estiver como
+administrador, feche o Monitor e use Iniciar-WYD-Monitor-Administrador.bat.
+Saldos podem ser parciais; totais nao deduplicam bau compartilhado entre personagens.
+Captura de morte inicia desativada para novos personagens. Quando ativada,
+pode restaurar a janela do jogo e enviar Print Screen. Preferencias salvas persistem.
+Agenda padrao usa America/Sao_Paulo. Agendas personalizadas existentes sao mantidas.
+
+VERIFICACAO E MOBILE
+"WYD Monitor.exe" --verify verifica carregamento, sem homologar leitura do jogo.
+Conector mobile oficial incluido. Inicie com Iniciar-Acesso-Celular.bat; pare com Parar-Acesso-Celular.bat. Quick Tunnel experimental, sem garantia de disponibilidade.
+O tunel externo requer conector instalado e teste real de rede antes do beta.
+Nao compartilhe senha ou URL privada de acesso nos relatos de problemas.
+
+ESTADO DO CANDIDATO
+A DLL recebeu ofuscacao conservadora. Esta versao NAO esta assinada e NAO e o instalador publico.
+C# compilado; a interface HTML local usa WebView2 e a orquestracao usa PowerShell.
+Licencas do SDK WebView2: bin/webview2-LICENSE.txt e bin/webview2-NOTICE.txt.
+Fixtures de QA nao acompanham este pacote. UiTest exige o ambiente de testes.
+Ainda faltam homologacao em outro computador, jogo real, licencas dos recursos
+e demais criterios do plano de beta. A versao identifica o candidato, nao seu aceite.
+Ao relatar erro, informe versao, passos, resultado esperado/obtido e hash do manifesto.
+
+D4: DLL com renomeacao interna conservadora. Scripts PowerShell permanecem acessiveis. Nao e protecao completa nem release publica.

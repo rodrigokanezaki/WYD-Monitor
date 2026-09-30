@@ -1,0 +1,179 @@
+﻿WYD MONITOR — INSTALAÇÃO E USO
+Versão 1.0.0-beta.7 | Teste interno com amigos
+
+1. COMO INSTALAR
+
+1) Salve o ZIP no computador com Windows.
+2) Clique com o botão direito nele e escolha “Extrair Tudo”.
+3) Extraia para uma pasta nova, por exemplo: C:\Testes\WYD Monitor.
+4) Abra a pasta extraída e dê dois cliques em “WYD Monitor.exe”.
+
+Pronto! Não há instalador. Mantenha todos os arquivos da pasta juntos.
+Não execute de dentro do ZIP e não copie apenas o EXE.
+Use Windows x64, PowerShell 5.1, .NET Framework 4.8 e Microsoft Edge WebView2 Runtime.
+Comece sem executar como administrador. Abra apenas um Monitor por vez.
+
+SE APARECER QUE FALTA O WEBVIEW2
+
+O WebView2 permite mostrar o novo painel. Ele pode já estar instalado no PC.
+Se o Monitor pedir esse componente:
+1) Abra a página oficial da Microsoft:
+   https://developer.microsoft.com/microsoft-edge/webview2/
+2) Em “Evergreen Bootstrapper”, baixe o instalador do WebView2 Runtime.
+3) Abra o arquivo baixado e siga as instruções da Microsoft. Use a internet nessa etapa.
+4) Ao terminar, abra “WYD Monitor.exe” novamente.
+
+O ZIP não instala o WebView2 automaticamente. Não é preciso instalar Visual Studio,
+um SDK, Node.js nem Codex para usar o Monitor.
+
+2. PRIMEIRO USO
+
+1) Abra o WYD e entre no seu personagem normalmente.
+2) Abra o WYD Monitor no mesmo computador.
+3) Aguarde os personagens aparecerem no painel.
+4) Confira se os dados correspondem aos que aparecem no jogo.
+
+ESCOLHA O VISUAL
+
+Na opção de aparência do painel, escolha Work ou Gamer:
+- Work: lista compacta, visual limpo e informações fáceis de comparar.
+- Gamer: cartões por personagem, com HP e recursos em destaque.
+A escolha fica salva para a próxima abertura. Você pode trocar quando quiser.
+Os dois modos acompanham os mesmos dados e usam as mesmas configurações.
+
+Se usar máquina virtual, abra o jogo e o Monitor DENTRO dela.
+Sem o jogo aberto, é normal não aparecer nenhum personagem.
+O programa acompanha informações; não joga nem combate por você.
+
+DOIS COMPUTADORES NA MESMA REDE
+
+Para juntar os personagens e os totais de dois PCs, abra Conexões no menu.
+Siga o arquivo GUIA-DOIS-PCS.txt que acompanha este pacote.
+
+3. O QUE CADA ÁREA FAZ
+
+PAINEL
+Mostra personagens, HP, nível, localização, fada, buff de XP, gold e moedas,
+quando disponíveis. Ao conectar dois PCs, confira o computador de origem de
+cada personagem. Use o filtro por PC para consultar uma origem ou ambas.
+Dados remotos indisponíveis não entram nos totais; confira a indicação de parcial.
+Também apresenta eventos e avisos. Work e Gamer mudam a apresentação do painel.
+
+PERSONAGENS
+Selecione um personagem para ver os detalhes.
+Clique em “Consultar itens deste personagem” para abrir a pesquisa já filtrada.
+Os resultados identificam se o item foi lido na mochila, no equipamento ou no baú.
+
+ITENS
+Use a barra de pesquisa para localizar um item pelo nome ou ID, ou pelo personagem.
+A consulta de inventário e baú mostra os dados lidos neste computador.
+Os itens do outro PC ainda não estão disponíveis nesta consulta: pesquise no
+Monitor aberto no computador de origem. Resultados vazios não confirmam ausência
+de um item quando a leitura está parcial ou o baú ainda não foi carregado.
+
+ALERTAS
+Os avisos ativos aparecem junto do personagem e no início da Central de alertas.
+Sem drop e sem XP respeitam os minutos configurados; sem fada e sem buff de XP
+exigem confirmação em duas leituras. Um novo aviso entra no histórico quando
+a condição começa. Limpar o histórico não apaga uma condição ainda ativa.
+O painel agrupa personagens por servidor e mantém a identificação de cada PC.
+
+Abra as configurações de avisos e marque as caixinhas de cada personagem.
+Você pode acompanhar ausência de fada e de buff XP, entre os avisos disponíveis.
+Nos campos sem XP e sem drop, informe quantos minutos esperar antes de avisar.
+Exemplo: sem XP = 5 avisa após cinco minutos sem ganho de XP.
+Nos limites sem XP e sem drop, 0 desliga o respectivo aviso.
+“Monitorar todos os exibidos” liga ou desliga o monitoramento dos personagens
+locais que aparecem no filtro. Os avisos e limites individuais são mantidos.
+Receber itens inclui transferências para a mochila; não significa necessariamente
+que houve um drop de monstro.
+Para configurar os avisos de um personagem do outro PC, abra o Monitor naquele
+computador. As configurações e ações continuam no computador de origem.
+
+CAPTURA DE MORTE
+Começa desligada para personagens novos. Se desejar, ative na área de alertas.
+Quando ativada, pode trazer a janela do jogo para frente e enviar Print Screen.
+Não precisa provocar uma morte para testar o programa.
+
+EVENTOS
+Abra Eventos no menu. Clique em “Adicionar evento” para cadastrar ou no nome de
+um evento para alterá-lo. Ajuste nome, horários e repetição e clique em “Salvar evento”.
+A agenda padrão usa horário de Brasília e avisos 15 e 5 minutos antes e no início:
+
+- Arena: todos os dias, 11h, 17h, 19h e 22h.
+- King of Tauron: todos os dias, 11h30, 14h30, 17h30 e 20h30.
+- Guerra de torre: todos os dias, 21h30, no TS.
+- King Tower: todos os dias, 21h45.
+- Kefra: quarta-feira, 20h.
+
+Deixe o Monitor aberto para acompanhar os avisos. Se você já tinha uma agenda
+personalizada, ela será mantida.
+
+ACESSO PELO CELULAR
+1. Mantenha o Monitor aberto e o computador conectado à internet.
+2. Abra Iniciar-Acesso-Celular.bat na mesma pasta do Monitor.
+3. Aguarde aparecer “Acesso criado”. Se o Windows solicitar permissão, confirme.
+4. Pressione Windows + R, cole %LOCALAPPDATA%\WYDMonitor e pressione Enter.
+5. Abra Acesso-Celular.txt. Ele contém o endereço, o usuário e a senha.
+6. No navegador do celular, abra esse endereço e informe usuário e senha.
+7. Para encerrar o acesso externo, abra Parar-Acesso-Celular.bat no computador.
+
+Não compartilhe Acesso-Celular.txt: ele contém sua senha. O endereço pode mudar
+quando você reinicia o acesso. O computador deve continuar ligado e com o
+Monitor aberto. O serviço externo é experimental e pode ficar indisponível.
+
+4. O QUE É IMPORTANTE SABER
+
+- “Não confirmado” ou “parcial” não significa que o personagem está sem itens
+  ou sem dinheiro. Pode faltar informação na leitura.
+- A localização pode ser estimada. O baú depende dos dados carregados pelo jogo.
+- Os totais não descontam automaticamente um baú compartilhado entre personagens.
+- Personagens com o mesmo nome no mesmo PC podem gerar conflito de identificação.
+  Entre PCs, confira a origem exibida para distinguir os personagens.
+- O pacote com acesso celular inclui o conector na pasta tools. Mantenha-a junto do programa.
+- Esta é uma versão de teste interno, ainda em validação. Não redistribua.
+
+5. SE ALGO NÃO FUNCIONAR
+
+O personagem não apareceu?
+Confira se o jogo está aberto, conectado e no mesmo Windows que o Monitor.
+Leia a mensagem de status exibida pelo programa.
+
+Apareceu “Incompatível” ou “Atualização detectada automaticamente”?
+O Monitor identifica atualizações e encontra automaticamente os dados quando
+a estrutura do cliente é compatível. Você não precisa informar o hash.
+Se aparecer “Incompatível”, a estrutura não foi reconhecida com segurança.
+Envie a mensagem ao responsável para adaptar a leitura dessa versão.
+
+Apareceu “Sem acesso”?
+O Windows bloqueou a leitura. Se o jogo está como administrador, feche o Monitor
+e abra Iniciar-WYD-Monitor-Administrador.bat. Confirme a solicitação do Windows.
+O motivo também aparece nos avisos do painel.
+
+O Windows bloqueou o programa?
+Envie uma imagem da mensagem. Não desative o antivírus para forçar a abertura.
+
+Apareceu erro de porta ou de outra instância?
+Feche outro WYD Monitor que você tenha aberto e tente novamente.
+Se continuar, envie a mensagem; não encerre processos desconhecidos.
+
+6. COMO ENVIAR SEU FEEDBACK
+
+Envie ao amigo que forneceu o programa:
+- O que você estava tentando fazer.
+- O que aconteceu e o que você esperava.
+- Uma imagem do erro, se possível.
+- Se está usando computador físico ou máquina virtual.
+- Versão do Monitor: 1.0.0-beta.7.
+
+Não envie senhas ou URLs privadas. Oculte dados pessoais nas imagens.
+Se perceber valores inconsistentes ou travamentos, pare o teste e avise.
+
+7. COMO FECHAR OU ATUALIZAR
+
+Feche o Monitor normalmente. As configurações ficam em:
+%LOCALAPPDATA%\WYDMonitor
+
+Antes de atualizar, feche o Monitor e guarde uma cópia dessa pasta, se existir.
+Extraia o novo ZIP em outra pasta. Não abra as duas versões ao mesmo tempo.
+Se houver problema, preserve os dados para ajudar no diagnóstico.
