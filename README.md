@@ -9,6 +9,8 @@
 
 > Projeto independente e não oficial. WYD e demais marcas pertencem aos seus respectivos proprietários.
 
+[![Baixar WYD Monitor](https://img.shields.io/badge/Download-v1.0.0--beta.7-0A84FF?style=for-the-badge&logo=github)](https://github.com/rodrigokanezaki/WYD-Monitor/releases/tag/v1.0.0-beta.7)
+
 ![Visão geral do WYD Monitor](wyd-monitor-overview.png)
 
 
@@ -102,6 +104,38 @@ Nunca publique:
 
 Veja também [PUBLICATION-SAFETY.md](PUBLICATION-SAFETY.md).
 
+## 🤖 Modificando com ChatGPT / Codex
+
+O projeto pode ser estudado e modificado com auxílio de ferramentas de IA como ChatGPT e Codex.
+
+Fluxo recomendado:
+
+1. Faça um **fork** ou clone o repositório.
+2. Crie uma branch para sua alteração.
+3. Abra a pasta completa do projeto no seu ambiente de desenvolvimento.
+4. Explique à IA **o objetivo da alteração e quais comportamentos atuais não podem ser quebrados**.
+5. Peça primeiro uma análise dos arquivos envolvidos antes de alterar código.
+6. Faça alterações pequenas e testáveis.
+7. Execute o monitor e confira desktop, alertas e mobile quando a mudança afetar essas áreas.
+8. Revise o `git diff` antes do commit.
+9. Envie um Pull Request descrevendo o que mudou e como foi testado.
+
+Exemplo de pedido:
+
+```text
+Analise este projeto antes de editar.
+Quero implementar [DESCREVA A FUNÇÃO].
+
+Regras:
+- preserve o comportamento atual que não estiver relacionado à mudança;
+- identifique os arquivos afetados antes de editar;
+- não remova funcionalidades existentes;
+- faça a menor alteração segura possível;
+- depois informe os arquivos alterados e como testar.
+```
+
+> Não envie senhas, tokens, credenciais ou dados pessoais para commits, Issues ou prompts compartilhados publicamente.
+
 ## 🤝 Contribuindo
 
 Contribuições são bem-vindas.
@@ -110,9 +144,13 @@ Você pode abrir uma **Issue** para relatar bugs ou sugerir funcionalidades e en
 
 Ao contribuir, informe o que foi alterado e como a mudança foi testada.
 
-## 📦 Releases
+## 📦 Download e Releases
 
-O código-fonte permanece disponível neste repositório. Pacotes prontos para usuários finais podem ser disponibilizados na seção **Releases** do GitHub.
+Para apenas usar o programa, baixe a versão pronta na página de Releases:
+
+**[⬇️ Baixar WYD Monitor v1.0.0-beta.7](https://github.com/rodrigokanezaki/WYD-Monitor/releases/tag/v1.0.0-beta.7)**
+
+Para desenvolvimento, clone o código-fonte deste repositório.
 
 ## 📄 Licença
 
