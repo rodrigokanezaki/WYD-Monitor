@@ -9,6 +9,9 @@
 
 > Projeto independente e não oficial. WYD e demais marcas pertencem aos seus respectivos proprietários.
 
+![Visão geral do WYD Monitor](wyd-monitor-overview.png)
+
+
 ## ✨ Recursos
 
 - Dashboard com modos **Work** e **Gamer**
