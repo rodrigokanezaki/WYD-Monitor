@@ -1,0 +1,15 @@
+WYD Monitor is licensed under the GNU General Public License, version 3.0.
+
+SPDX-License-Identifier: GPL-3.0-only
+
+Copyright (C) 2026 WYD Monitor contributors
+
+You may redistribute and/or modify the original WYD Monitor source code under the
+terms of the GNU General Public License version 3.
+
+The complete, unmodified GPLv3 license text is available from the Free Software
+Foundation at:
+https://www.gnu.org/licenses/gpl-3.0.txt
+
+Third-party components bundled with or referenced by this repository are governed
+by their own licenses and notices. See the relevant LICENSE/NOTICE files.
