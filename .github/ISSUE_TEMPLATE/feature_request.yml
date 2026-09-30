@@ -1,0 +1,52 @@
+name: "💡 Sugerir funcionalidade"
+description: "Sugira uma melhoria ou novo recurso para o WYD Monitor"
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideias e contribuições são bem-vindas. Descreva o problema que a funcionalidade resolveria antes de detalhar a solução.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou necessidade
+      description: O que você gostaria de resolver ou melhorar?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Funcionalidade sugerida
+      description: Explique como você imagina a solução.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área do projeto
+      options:
+        - Painel / Dashboard
+        - Personagens
+        - Itens
+        - Alertas
+        - Eventos
+        - Conexão entre PCs
+        - Acesso pelo celular
+        - Aparência / Interface
+        - Instalação / Atualização
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Exemplos ou referências
+      description: Se ajudar, inclua imagens, exemplos ou uma descrição do fluxo desejado.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmação
+      options:
+        - label: Verifiquei se já existe uma Issue semelhante.
+          required: true
